@@ -25,31 +25,27 @@ The exploit only prints `PPPwned` on your PS4 as a proof-of-concept. In order to
 On your computer, clone the repository:
 
 ```sh
-git clone --recursive https://github.com/TheOfficialFloW/PPPwn
+git clone --recursive https://github.com/Siverslayer/PPPwn
 ```
 
 Install the requirements:
 
 ```sh
-sudo pip install -r requirements.txt
+ pip install -r requirements.txt
 ```
 
-Compile the payloads:
+open GUI.exe
 
-```sh
-make -C stage1 FW=1100 clean && make -C stage1 FW=1100
-make -C stage2 FW=1100 clean && make -C stage2 FW=1100
-```
+![image](https://github.com/Siverslayer/PPPwn/assets/164073129/7e3da260-11d2-4798-bf75-a01f61697e7a)
 
-For other firmwares, e.g. FW 9.00, pass `FW=900`.
+your lan
 
-Run the exploit (see `ifconfig` for the correct interface):
+![image](https://github.com/Siverslayer/PPPwn/assets/164073129/6b3dc045-fab4-4f82-a205-99f66dda458c)
 
-```sh
-sudo python3 pppwn.py --interface=enp0s3 --fw=1100
-```
+your ps4 update
 
-For other firmwares, e.g. FW 9.00, pass `--fw=900`.
+![image](https://github.com/Siverslayer/PPPwn/assets/164073129/050e9d38-67bb-461a-9dfc-349d91a3d669)
+
 
 On your PS4:
 
@@ -60,6 +56,11 @@ On your PS4:
 - Choose `Automatic` for `DNS Settings` and `MTU Settings`
 - Choose `Do Not Use` for `Proxy Server`
 - Click `Test Internet Connection` to communicate with your computer
+
+after that in GUI 
+
+![image](https://github.com/Siverslayer/PPPwn/assets/164073129/ad5b98b1-69d0-4357-bf8f-f2f1f874d76b)
+
 
 If the exploit fails or the PS4 crashes, you can skip the internet setup and simply click on `Test Internet Connection`. If the `pppwn.py` script is stuck waiting for a request/response, abort it and run it again on your computer, and then click on `Test Internet Connection` on your PS4.
 
@@ -150,8 +151,9 @@ If the exploit works, you should see an output similar to below, and you should 
 [+] Done!
 ```
 
-## Notes for Mac Apple Silicon Users (arm64 / aarch64)
-The code will not compile on Apple Silicon and requires amd64 architecture. 
-There is a workaround using docker which will build the bin files required.
-Clone this repository to your mac system, then from the repo folder run `./build-macarm.sh`.This will build the binaries for PS4 FW 1100 and place the necessary files into the correct folders. To build the binaries for a different version, i.e. 900, run the command as such: `./build-macarm.sh 900`. Once built, copy this folder structure into the Linux VM and execute as instructed above. 
-This has been tested using VMware Fusion 13.5.1, with the VM Guest as Ubuntu 24.04, and the host machine is MacOS 14.4.1
+![image](https://github.com/Siverslayer/PPPwn/assets/164073129/d7265d20-78b1-428a-bf0b-d195896790cf)
+
+
+
+
+![image](https://github.com/Siverslayer/PPPwn/assets/164073129/b17e26e3-4ca0-4807-a688-b444d57930f0)
